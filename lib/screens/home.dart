@@ -75,10 +75,13 @@ class _HomeState extends State<Home> {
                               ),
                               child: Row(
                                 children: [
-                                  Image.network(
-                                    songs[index].thumbnail!,
-                                    height: 100,
-                                    fit: BoxFit.cover,
+                                  Hero(
+                                    tag: songs[index].thumbnail!,
+                                    child: Image.network(
+                                      songs[index].thumbnail!,
+                                      height: 100,
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
                                   Expanded(
                                     child: Container(
